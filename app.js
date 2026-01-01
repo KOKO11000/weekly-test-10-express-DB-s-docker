@@ -8,8 +8,8 @@ app.get("/health",(req,res)=>{
     res.json({status:"OK"})
 })
 
-app.use("/register",router)
-
+app.use("/api/auth/register",router)
+app.use("api/message",)
 
 app.listen(port,()=>{
     console.log(`port running http://localhost:${port}`);

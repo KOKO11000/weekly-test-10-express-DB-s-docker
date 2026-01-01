@@ -1,10 +1,22 @@
 import express from "express";
-// import service from "../services/usersServ.js";
-import { createNewUser } from "../controllers/usersCtrl.js";
-import { validateUsernameAndPAss } from "../middleWares/usersMidlW.js";
+import { insertUser } from "../mongoCRUD/crud.js";
+
 const router = express.Router()
 
+const collectionName = "users collection"
 
-router.post("/", validateUsernameAndPAss,createNewUser)
+
+router.post("", async (req, res) => {
+    try {
+        const { username, password } = req.body
+        const newUser = await insertUser(collectionName,{ username, password});
+        console.log(newUser);
+        return res.status(201).json([{ username: username,id:newUser.insertedId }]);
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({ error: error.message });
+    }
+
+})
 
 export default router
