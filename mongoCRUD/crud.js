@@ -22,3 +22,14 @@ export async function insertUser(DB, data = {}) {
         console.error(error)
     }
 }
+
+export async function getAll(DB,_id) {
+    try {
+        const db = await connect()
+        const result = await db.collection(DB).find({_id:new ObjectId(_id)}).toArray() // return all data
+        console.log(`${result} SUCCESS!`);
+        return result
+    } catch (error) {
+        console.error(error)
+    }
+}

@@ -9,7 +9,8 @@ app.get("/health",(req,res)=>{
     res.json({status:"OK"})
 })
 
-app.use("/api/auth/register",routerU)
+app.use("/api",routerU)
+
 app.use("/api/message",routerM)
 
 app.listen(port,()=>{

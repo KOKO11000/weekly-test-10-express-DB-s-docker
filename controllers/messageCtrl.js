@@ -1,4 +1,4 @@
-import { addNewMsg, encryptMsg } from "../services/messageSrv";
+import { addNewMsg, encryptMsg } from "../services/messageSrv.js";
 
 export const addToSupabase = async (req, res) => {
     try {

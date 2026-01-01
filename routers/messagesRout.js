@@ -8,7 +8,12 @@ const routerM = express.Router()
 
 routerM.post("/encrypt", validateUsername, addToSupabase)
 routerM.post("/decrypt",async (req,res)=>{
+   try {
+     const {id} = req.body
+     res.json({id:id,decryptedText: "addNewMsg"})
+   } catch (error) {
     
+   }
 })
 
 export default routerM
