@@ -1,9 +1,11 @@
-export async function validateUsernameAndPAss(req, res, next) {
+import { loginUsernamePass } from "../services/messageSrv.js"
+export async function validateUsername(req, res, next) {
     try {
-        const { username, password } = req.body
-        const user = await service.loginUsernamePass(username, password)
+        const { username } = req.headers
+        const user = await loginUsernamePass(username)
         if (user) {
             next()
+
         } else {
             return res.status(404)
         }

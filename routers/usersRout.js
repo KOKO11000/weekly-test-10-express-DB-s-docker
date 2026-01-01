@@ -1,12 +1,12 @@
 import express from "express";
 import { insertUser } from "../mongoCRUD/crud.js";
 
-const router = express.Router()
+const routerU = express.Router()
 
 const collectionName = "users collection"
 
 
-router.post("", async (req, res) => {
+routerU.post("", async (req, res) => {
     try {
         const { username, password } = req.body
         const newUser = await insertUser(collectionName,{ username, password});
@@ -19,4 +19,4 @@ router.post("", async (req, res) => {
 
 })
 
-export default router
+export default routerU
