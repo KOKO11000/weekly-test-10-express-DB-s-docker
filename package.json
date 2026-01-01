@@ -1,0 +1,28 @@
+{
+  "name": "weeklyproject",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000w\u0000e\u0000e\u0000k\u0000l\u0000y\u0000-\u0000p\u0000r\u0000o\u0000j\u0000e\u0000c\u0000t\u0000-\u0000w\u0000i\u0000t\u0000h\u0000-\u0000n\u0000o\u0000d\u0000e\u0000.\u0000j\u0000s\u0000-\u0000a\u0000n\u0000d\u0000-\u0000e\u0000x\u0000p\u0000r\u0000e\u0000s\u0000s\u0000-\u0000a\u0000n\u0000d\u0000-\u00002\u0000-\u0000D\u0000B\u0000-\u0000s\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --watch app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KOKO11000/weekly-project-with-node.js-and-express-and-2-DB-s.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/KOKO11000/weekly-project-with-node.js-and-express-and-2-DB-s/issues"
+  },
+  "homepage": "https://github.com/KOKO11000/weekly-project-with-node.js-and-express-and-2-DB-s#readme",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mongodb": "^7.0.0",
+    "@supabase/supabase-js": "^2.89.0"
+  }
+}
